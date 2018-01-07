@@ -12,11 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
-    
     @IBOutlet weak var totalLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        updateUI()
+    // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +33,12 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
+    func updateUI()  {
+        let defaults = UserDefaults.standard
+        let defaultPercent = defaults.integer (forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = defaultPercent
+    
+    }
     
     @IBAction func calculateTip(_ sender: Any) {
         

@@ -66,15 +66,15 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="6MC-Wb-lbb"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YUG-LK-l5x">
-                                <rect key="frame" x="286" y="374" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flo-hI-1U4">
+                                <rect key="frame" x="274" y="309" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.69226933499999999" blue="0.80246348010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flo-hI-1U4">
-                                <rect key="frame" x="286" y="307" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YUG-LK-l5x">
+                                <rect key="frame" x="274" y="374" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.69226933499999999" blue="0.80246348010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,7 +87,14 @@
                             <outletCollection property="gestureRecognizers" destination="PCG-Jm-nIv" appends="YES" id="E8k-0q-lW2"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator " id="Plr-I2-SXj"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator " id="Plr-I2-SXj">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Lau-Mz-4B2">
+                            <color key="tintColor" red="0.60983115434646606" green="0.093759171664714813" blue="0.64757829904556274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="NPb-pi-QzD" kind="push" id="aVP-Dd-glg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="fHA-UB-hQk" id="ZKa-Ra-MQe"/>
                         <outlet property="tipControl" destination="cQn-fb-vMr" id="aal-lb-3Jp"/>
@@ -103,6 +110,46 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="162" y="147"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="sKf-XH-fLL">
+            <objects>
+                <viewController id="NPb-pi-QzD" customClass="SettingsViewController" customModule="Tip_Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SGb-HG-lXG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default tip amount: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cIC-l0-5ih">
+                                <rect key="frame" x="20" y="85" width="247" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.99421602487564087" green="0.69037044048309326" blue="0.80426037311553955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="org-WC-xTU">
+                                <rect key="frame" x="20" y="130" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="ChangeSetting:" destination="NPb-pi-QzD" eventType="valueChanged" id="xYC-NX-kyx"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60983115434646606" green="0.093759171664714813" blue="0.64757829904556274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99815124273300171" green="0.69438385963439941" blue="0.8041040301322937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="RRS-US-tDN"/>
+                    <connections>
+                        <outlet property="TipPercentage" destination="org-WC-xTU" id="9IT-Qf-PnQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wv-wB-zrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eh1-yw-eG1">
@@ -123,4 +170,5 @@
             <point key="canvasLocation" x="-50" y="147"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.60983115434646606" green="0.093759171664714813" blue="0.64757829904556274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

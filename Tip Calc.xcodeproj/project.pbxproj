@@ -14,6 +14,7 @@
 		E002F60C1FF00D7A0037888F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E002F60A1FF00D7A0037888F /* LaunchScreen.storyboard */; };
 		E002F6171FF00D7B0037888F /* Tip_CalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002F6161FF00D7B0037888F /* Tip_CalcTests.swift */; };
 		E002F6221FF00D7B0037888F /* Tip_CalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002F6211FF00D7B0037888F /* Tip_CalcUITests.swift */; };
+		E0D907D01FF71C670066604C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D907CF1FF71C670066604C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E002F61D1FF00D7B0037888F /* Tip CalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E002F6211FF00D7B0037888F /* Tip_CalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalcUITests.swift; sourceTree = "<group>"; };
 		E002F6231FF00D7B0037888F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0D907CF1FF71C670066604C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				E002F6011FF00D7A0037888F /* AppDelegate.swift */,
 				E002F6031FF00D7A0037888F /* ViewController.swift */,
 				E002F6051FF00D7A0037888F /* Main.storyboard */,
+				E0D907CF1FF71C670066604C /* SettingsViewController.swift */,
 				E002F6081FF00D7A0037888F /* Assets.xcassets */,
 				E002F60A1FF00D7A0037888F /* LaunchScreen.storyboard */,
 				E002F60D1FF00D7A0037888F /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				E002F6041FF00D7A0037888F /* ViewController.swift in Sources */,
 				E002F6021FF00D7A0037888F /* AppDelegate.swift in Sources */,
+				E0D907D01FF71C670066604C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L84MJ8VB5P;
 				INFOPLIST_FILE = "Tip Calc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Morgan-State.Tip-Calc";
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L84MJ8VB5P;
 				INFOPLIST_FILE = "Tip Calc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Morgan-State.Tip-Calc";
